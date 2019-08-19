@@ -1,1 +1,1 @@
-web: run gulpbuild
+web: yarn start
