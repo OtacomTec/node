@@ -1,0 +1,644 @@
+{{#> 
+	layouts/ajax 
+	title="Produto" 
+	pagename="form_basic_inputs" 
+	heading="<i class='subheader-icon fal fa-edit'></i>  Detalhes do produto" 
+	category_1="Suprimentos" 
+	pagedescription=""
+}}
+{{#*inline "content-block"}}
+<div class="row">
+	<div class="col-xl-12">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Detalhes do produto
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+				</div>
+			</div>
+
+			<div class="panel-container show">
+                <div class="panel-content">
+
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab_default-1" role="tab"><i class="fal fa-home mr-1"></i> Geral</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_default-2" role="tab"><i class="fal fa-home mr-1"></i> Precifica&ccedil&atildeo</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_default-3" role="tab"><i class="fal fa-home mr-1"></i> Automa&ccedil&atildeo</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_default-4" role="tab"><i class="fal fa-home mr-1"></i> Fornecedor</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_default-5" role="tab"><i class="fal fa-home mr-1"></i> Composi&ccedil&atildeo</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab_default-6" role="tab"><i class="fal fa-home mr-1"></i> M&iacutedia</a></li>
+                    </ul>
+
+                    <div class="tab-content border border-top-0 p-3">
+                        <div class="tab-pane fade show active" id="tab_default-1" role="tabpanel">
+                            <div class="row">
+                                <div class="col-xl-8">
+                                    <div class="form-group">
+                                        <label class="form-label">Empresa</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Data Cadastro</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">C&oacutedigo</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Descri&ccedil&atildeo</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Apresenta&ccedil&atildeo</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Categoria</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Grupo</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Subgrupo</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Classifica&ccedil&atildeo</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Refer&ecircncia</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Natureza</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Fabricante/Marca/Laborat&oacuterio</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Estoque Loja</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                                <div class="col-xl-4">
+                                    <div class="form-group">
+                                        <label class="form-label">Estoque Dep&oacutesito</label>
+                                        <input class="form-control" value="" disabled="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab_default-2" role="tabpanel">
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <fieldset>
+                                        <legend>Custos:</legend>
+                                        <div class="row">
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Real</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">M&eacutedio</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Cont&aacutebil</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-xl-4">
+                                    <fieldset>
+                                        <legend>Peso:</legend>
+                                        <div class="row">
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">L&iacutequido</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Bruto</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Vari&aacutevel</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-xl-4">
+                                    <fieldset>
+                                        <legend>Situa&ccedil&atildeo:</legend>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label class="form-label">Inativo</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label class="form-label">Suspenso</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <fieldset>
+                                        <legend>Faixa Comiss&atildeo:</legend>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Vendedor</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <label class="form-label">Supervisor</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-xl-4">
+                                    <fieldset>
+                                        <legend>Estoque:</legend>
+                                        <div class="row">
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Controle</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Min. Venda</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Atual</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">M&iacutenimo</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">M&aacuteximo</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Ponto Pedido</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-xl-4">
+                                    <fieldset>
+                                        <legend>Margens:</legend>
+                                        <div class="row">
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Bruta</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Te&oacuterica</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="form-group">
+                                                    <label class="form-label">Negocia&ccedil&atildeo</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label class="form-label">L. Bruto</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <div class="form-group">
+                                                    <label class="form-label">L. Real</label>
+                                                    <input class="form-control" value="" disabled="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <div class="col-xl-4">
+                                <fieldset>
+                                    <legend>Fatores:</legend>
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Und. Compra</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Und. Venda</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Und. Varejo</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Fat. Compra</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Fat. Venda</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4">
+                                            <div class="form-group">
+                                                <label class="form-label">Fat. Varejo</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab_default-3" role="tabpanel">
+                            <div class="col-xl-12">
+                                <div class="row">
+                                    <div class="col-xl-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Cod. Produto</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9">
+                                        <div class="form-group">
+                                            <label class="form-label">Descri&ccedil&atildeo Produto</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                                <div class="row">
+                                    <div class="col-xl-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Cod. Automa&ccedil&atildeo</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-7">
+                                        <div class="form-group">
+                                            <label class="form-label">Descri&ccedil&atildeo Automa&ccedil&atildeo</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-1">
+                                        <div class="form-group">
+                                            <br />
+                                            <button class="btn btn-primary">Incluir</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-1">
+                                        <div class="form-group">
+                                            <br />
+                                            <button class="btn btn-primary">Remover</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <table class="table table-bordered table-hover table-striped w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th>C&oacutedigo de Barras</th>
+                                                    <th>Unidade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>123456</td>
+                                                    <td>UN</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab_default-4" role="tabpanel">
+                            <div class="col-xl-12">
+                                <div class="row">
+                                    <div class="col-xl-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Cod. Produto</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9">
+                                        <div class="form-group">
+                                            <label class="form-label">Descri&ccedil&atildeo Produto</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                                <div class="row">
+                                    <div class="col-xl-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Cod. Fornecedor</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="form-group">
+                                            <label class="form-label">Nome Fornecedor</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <label class="form-label">Principal</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <table class="table table-bordered table-hover table-striped w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th>Fonecedor</th>
+                                                    <th>Nome</th>
+                                                    <th>Principal</th>
+                                                    <th>Pattern Number</th>
+                                                    <th>Nome Vendedor</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12754</td>
+                                                    <td>Coca-Cola</td>
+                                                    <td>N&atildeo</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab_default-5" role="tabpanel">
+                            <div class="col-xl-12">
+                                <div class="row">
+                                    <div class="col-xl-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Cod. Produto</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9">
+                                        <div class="form-group">
+                                            <label class="form-label">Descri&ccedil&atildeo Produto</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                                <div class="row">
+                                    <div class="col-xl-3">
+                                        <div class="form-group">
+                                            <label class="form-label">Cod. Produto</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5">
+                                        <div class="form-group">
+                                            <label class="form-label">Descri&ccedil&atildeo Produto</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-1">
+                                        <div class="form-group">
+                                            <label class="form-label">Und. Venda</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-1">
+                                        <div class="form-group">
+                                            <label class="form-label">Quantidade</label>
+                                            <input class="form-control" value="" disabled="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-1">
+                                        <div class="form-group">
+                                            <br />
+                                            <button class="btn btn-primary">Incluir</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-1">
+                                        <div class="form-group">
+                                            <br />
+                                            <button class="btn btn-primary">Remover</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <table class="table table-bordered table-hover table-striped w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th>Produto</th>
+                                                    <th>Descri&ccedil&atildeo</th>
+                                                    <th>Und.</th>
+                                                    <th>Quantidade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                        
+                        <div class="tab-pane fade" id="tab_default-6" role="tabpanel">
+                            <div class="col-xl-12">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label class="form-label">Imagem</label>
+                                        <br />
+                                        <img src="/img/demo/pizza_mussarela.jpg" style="width:250px; height:250px;"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+{{/inline}}
+{{#*inline "scripts-block"}}
+<script type="text/javascript">
+	var example_gridsize = $("#example-gridsize");
+
+	$("#gridrange").on("input change", function() {
+		//do something
+		example_gridsize.attr("placeholder", ".col-" + $(this).val());
+		example_gridsize.parent().removeClass().addClass("col-" + $(this).val())
+		console.log("col-" + $(this).val());
+	});
+</script>
+{{/inline}}
+
+{{/layouts/ajax}}

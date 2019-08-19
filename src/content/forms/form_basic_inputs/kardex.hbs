@@ -1,0 +1,251 @@
+{{#> 
+	layouts/ajax 
+	title="Kardex" 
+	pagename="datatables_autofill" 
+	category_1="Suprimentos"
+	heading="<i class='subheader-icon fal fa-edit'></i> Kardex: "
+}}
+
+{{#*inline "head-block"}}
+	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	<div class="col-xl-12">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+                <h2>
+                    Kardex
+                </h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					
+                    <div class="col-xl-12">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <fieldset>
+                                    <legend>Filtros:</legend>
+                                    <div class="row">
+                                        <div class="col-xl-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Cod. Produto</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Descri&ccedil&atildeo Produto</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2">
+                                            <div class="form-group">
+                                                <label class="form-label">In&iacutecio Per&iacuteodo</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Fim Per&iacuteodo</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <br />
+
+                                    <div class="row">
+                                        <div class="col-xl-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Cod. Vendedor</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Nome Vendedor</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2">
+                                            <div class="form-group">
+                                                <label class="form-label">Tipo Nota</label>
+                                                <input class="form-control" value="" disabled="">
+                                            </div>
+                                        </div>
+                                        <!--<div class="col-xl-2">
+                                            <div class="form-group">
+                                                <br />
+                                                <button class="btn btn-primary btn-block">Ok</button>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <fieldset>
+                                    <legend>Notas Fiscais:</legend>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <!-- datatable start -->
+                                            <table class="table table-bordered table-hover table-striped w-100">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Data</th>
+                                                        <th>N&uacuteemero</th>
+                                                        <th>Se</th>
+                                                        <th>Cod.</th>
+                                                        <th>Vendedor</th>
+                                                        <th>Cod.</th>
+                                                        <th>Emitente</th>
+                                                        <th>Custo R.</th>
+                                                        <th>Qtde.</th>
+                                                        <th>Pre&ccedilo Und.</th>
+                                                        <th>UN</th>
+                                                        <th>Valor Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="background-color:#11b21e;"></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!-- datatable end -->
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <fieldset>
+                                    <legend>Resumos:</legend>
+                                    <div class="row">
+                                        <div class="col-xl-3">
+                                            <h3><b>Estoque Atual: XXX,XX</b></h3>
+                                        </div>
+
+                                        <div class="col-xl-3">
+                                            <table cellspacing="5" width="100%">
+                                                <tr>
+                                                    <td><h3><b>Mov.Sa&iacutedas....:</b></h3></td>
+                                                    <td><h3 style="margin-bottom:0px; margin-left:5px; text-align:right; background-color:#dec814; color:white;"> <b>XXXX</b></h3></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><h3><b>Mov.Entradas:</b></h3></td>
+                                                    <td><h3 style="margin-bottom:0px; margin-left:5px; text-align:right;  background-color:#11b21e; color:white;"> <b>XXX</b></h3></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><hr /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><h3><b>Total Mov......:</b></h3></td>
+                                                    <td><h3 style="margin-bottom:0px; margin-left:5px; text-align:right;  background-color:black; color:white;"><b>XXX</b></h3></td>
+                                                </tr>
+                                            </table>                                            
+                                        </div>
+
+                                        <div class="col-xl-1"></div>
+
+                                        <div class="col-xl-2">
+                                            <table cellspacing="5" width="100%">
+                                                <tr>
+                                                    <td style="background-color:#11b21e; width:25px;"></td>
+                                                    <td><h3 style="margin-bottom:0px; margin-left:5px;"> <b>Entrada</b></h3></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background-color:#dec814; width:25px;"></td>
+                                                    <td><h3 style="margin-bottom:0px; margin-left:5px;"> <b>Sa&iacuteda</b></h3></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="background-color:red; width:25px;"></td>
+                                                    <td><h3 style="margin-bottom:0px; margin-left:5px;"> <b>Cancelados</b></h3></td>
+                                                </tr>
+                                            </table>                                            
+                                        </div>
+
+                                        <div class="col-xl-3">
+                                            <button class="btn btn-primary btn-block">Imprimir</button><br />
+                                            <button class="btn btn-primary btn-block">Cancelar</button>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+
+<!-- datatble responsive bundle contains: 
+	+ jquery.dataTables.js
+	+ dataTables.bootstrap4.js
+	+ dataTables.autofill.js							
+	+ dataTables.buttons.js
+	+ buttons.bootstrap4.js
+	+ buttons.html5.js
+	+ buttons.print.js
+	+ buttons.colVis.js
+	+ dataTables.colreorder.js							
+	+ dataTables.fixedcolumns.js							
+	+ dataTables.fixedheader.js						
+	+ dataTables.keytable.js						
+	+ dataTables.responsive.js							
+	+ dataTables.rowgroup.js							
+	+ dataTables.rowreorder.js							
+	+ dataTables.scroller.js							
+	+ dataTables.select.js							
+	+ datatables.styles.app.js
+	+ datatables.styles.buttons.app.js -->
+<!--<script src="js/datagrid/datatables/datatables.bundle.js"></script>
+<script>
+	$(document).ready( function () {
+		$('#dt-basic-example').dataTable({
+			responsive: true,
+			autoFill: {
+				focus: 'hover'
+			}
+        });
+	});
+</script>-->
+
+{{/inline}}
+
+{{/layouts/ajax}}

@@ -1,0 +1,189 @@
+<ul id="js-nav-menu" class="nav-menu">
+	<li {{#is pagename "in" "intel_analytics_dashboard,intel_marketing_dashboard"}}class="active open" {{/is}}>
+		<a href="#" title="Indicadores e Paineis" data-filter-tags="indicadores e paineis">
+			<i class="fal fa-chart-area"></i>
+			<span class="nav-link-text" data-i18n="nav.indicadores_e_paineis">Indicadores e Paineis</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "intel_analytics_dashboard"}}class="active" {{/is}}>
+				<a href="intel_analytics_dashboard.html" title="Dashboard Vendas" data-filter-tags="indicadores e paineis dashboard vendas">
+					<span class="nav-link-text" data-i18n="nav.indicadores_e_paineis_dashboard_vendas">Dashboard Vendas</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active" {{/is}}>
+				<a href="intel_marketing_dashboard.html" title="Dashboard Controladoria" data-filter-tags="indicadores e paineis dashboard controladoria">
+					<span class="nav-link-text" data-i18n="nav.indicadores_e_paineis_dashboard_controladoria">Dashboard Controladoria</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-title">Operações e Suprimentos</li>
+	<li {{#is pagename "in" "ui_accordion,intel_marketing_dashboard,intel_introduction,intel_privacy"}}class="active open" {{/is}}>
+		<a href="#" title="Gestão de Vendas" data-filter-tags="gestão de vendas">
+			<i class="fal fa-shopping-cart"></i>
+			<span class="nav-link-text" data-i18n="nav.gestão_de_vendas">Gestão de Vendas</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "ui_accordion"}}class="active" {{/is}}>
+				<a href="ui_accordion.html" title="Operações" data-filter-tags="gestão de vendas operações">
+					<span class="nav-link-text" data-i18n="nav.gestão_de_vendas_operações">Operações</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active" {{/is}}>
+				<a href="intel_marketing_dashboard.html" title="Finalizadoras" data-filter-tags="gestão de vendas finalizadoras">
+					<span class="nav-link-text" data-i18n="nav.gestão_de_vendas_finalizadoras">Finalizadoras</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_introduction"}}class="active" {{/is}}>
+				<a href="intel_introduction.html" title="Pontos de Venda" data-filter-tags="gestão de vendas pontos de venda">
+					<span class="nav-link-text" data-i18n="nav.gestão_de_vendas_pontos_de_venda">Pontos de Venda</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_privacy"}}class="active" {{/is}}>
+				<a href="intel_privacy.html" title="Operadores" data-filter-tags="gestão de vendas operadores">
+					<span class="nav-link-text" data-i18n="nav.gestão_de_vendas_operadores">Operadores</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li {{#is pagename "in" "produtos,blank,blank,produtosKardex"}}class="active open" {{/is}}>
+		<a href="#" title="Suprimentos" data-filter-tags="suprimentos">
+			<i class="fal fa-dolly-flatbed-alt"></i>
+			<span class="nav-link-text" data-i18n="nav.suprimentos">Suprimentos</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "produtos"}}class="active" {{/is}}>
+				<a href="produtos.html" title="Produto" data-filter-tags="suprimentos produto">
+					<span class="nav-link-text" data-i18n="nav.suprimentos_produto">Produto</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "blank"}}class="active" {{/is}}>
+				<a href="blank.html" title="Nota Fiscal de Entrada" data-filter-tags="suprimentos nota fiscal de entrada">
+					<span class="nav-link-text" data-i18n="nav.suprimentos_nota_fiscal_de_entrada">Nota Fiscal de Entrada</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "blank"}}class="active" {{/is}}>
+				<a href="blank.html" title="Inventário" data-filter-tags="suprimentos inventário">
+					<span class="nav-link-text" data-i18n="nav.suprimentos_inventário">Inventário</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "produtosKardex"}}class="active" {{/is}}>
+				<a href="produtosKardex.html" title="Kardex" data-filter-tags="suprimentos kardex">
+					<span class="nav-link-text" data-i18n="nav.suprimentos_kardex">Kardex</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-title">Controladoria</li>
+	<li {{#is pagename "in" "intel_analytics_dashboard,intel_marketing_dashboard,intel_introduction"}}class="active open" {{/is}}>
+		<a href="#" title="Caixa" data-filter-tags="caixa">
+			<i class="ni ni-shuffle"></i>
+			<span class="nav-link-text" data-i18n="nav.caixa">Caixa</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "intel_analytics_dashboard"}}class="active" {{/is}}>
+				<a href="intel_analytics_dashboard.html" title="Abertura" data-filter-tags="caixa abertura">
+					<span class="nav-link-text" data-i18n="nav.caixa_abertura">Abertura</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active" {{/is}}>
+				<a href="intel_marketing_dashboard.html" title="Fechamento" data-filter-tags="caixa fechamento">
+					<span class="nav-link-text" data-i18n="nav.caixa_fechamento">Fechamento</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_introduction"}}class="active" {{/is}}>
+				<a href="intel_introduction.html" title="Conferência" data-filter-tags="caixa conferência">
+					<span class="nav-link-text" data-i18n="nav.caixa_conferência">Conferência</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li {{#is pagename "in" "cr_titulos,intel_marketing_dashboard,intel_introduction"}}class="active open" {{/is}}>
+		<a href="#" title="Contas a Receber" data-filter-tags="contas a receber">
+			<i class="fal fa-arrow-alt-down"></i>
+			<span class="nav-link-text" data-i18n="nav.contas_a_receber">Contas a Receber</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "cr_titulos"}}class="active" {{/is}}>
+				<a href="cr_titulos.html" title="Títulos" data-filter-tags="contas a receber títulos">
+					<span class="nav-link-text" data-i18n="nav.contas_a_receber_títulos">Títulos</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active" {{/is}}>
+				<a href="intel_marketing_dashboard.html" title="Baixa" data-filter-tags="contas a receber baixa">
+					<span class="nav-link-text" data-i18n="nav.contas_a_receber_baixa">Baixa</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_introduction"}}class="active" {{/is}}>
+				<a href="intel_introduction.html" title="Estorno" data-filter-tags="contas a receber estorno">
+					<span class="nav-link-text" data-i18n="nav.contas_a_receber_estorno">Estorno</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li {{#is pagename "in" "intel_analytics_dashboard,intel_marketing_dashboard,intel_introduction"}}class="active open" {{/is}}>
+		<a href="#" title="Contas a Pagar" data-filter-tags="contas a pagar">
+			<i class="fal fa-arrow-alt-up"></i>
+			<span class="nav-link-text" data-i18n="nav.contas_a_pagar">Contas a Pagar</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "intel_analytics_dashboard"}}class="active" {{/is}}>
+				<a href="intel_analytics_dashboard.html" title="Títulos" data-filter-tags="contas a pagar títulos">
+					<span class="nav-link-text" data-i18n="nav.contas_a_pagar_títulos">Títulos</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active" {{/is}}>
+				<a href="intel_marketing_dashboard.html" title="Baixa" data-filter-tags="contas a pagar baixa">
+					<span class="nav-link-text" data-i18n="nav.contas_a_pagar_baixa">Baixa</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_introduction"}}class="active" {{/is}}>
+				<a href="intel_introduction.html" title="Estorno" data-filter-tags="contas a pagar estorno">
+					<span class="nav-link-text" data-i18n="nav.contas_a_pagar_estorno">Estorno</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-title">Apoio</li>
+	<li {{#is pagename "in" "fila,intel_marketing_dashboard"}}class="active open" {{/is}}>
+		<a href="#" title="Produção" data-filter-tags="produção">
+			<i class="ni ni-loop"></i>
+			<span class="nav-link-text" data-i18n="nav.produção">Produção</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "fila"}}class="active" {{/is}}>
+				<a href="fila.html" title="Fila" data-filter-tags="produção fila">
+					<span class="nav-link-text" data-i18n="nav.produção_fila">Fila</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active" {{/is}}>
+				<a href="intel_marketing_dashboard.html" title="Planejamento" data-filter-tags="produção planejamento">
+					<span class="nav-link-text" data-i18n="nav.produção_planejamento">Planejamento</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li {{#is pagename "in" "intel_analytics_dashboard,montagemRota,intel_marketing_dashboard"}}class="active open" {{/is}}>
+		<a href="#" title="Entrega" data-filter-tags="entrega">
+			<i class="fal fa-road"></i>
+			<span class="nav-link-text" data-i18n="nav.entrega">Entrega</span>
+		</a>
+		<ul>
+			<li {{#is pagename "===" "intel_analytics_dashboard"}}class="active" {{/is}}>
+				<a href="intel_analytics_dashboard.html" title="Entregadores" data-filter-tags="entrega entregadores">
+					<span class="nav-link-text" data-i18n="nav.entrega_entregadores">Entregadores</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "montagemRota"}}class="active" {{/is}}>
+				<a href="montagemRota.html" title="Montagem da Rota" data-filter-tags="entrega montagem da rota">
+					<span class="nav-link-text" data-i18n="nav.entrega_montagem_da_rota">Montagem da Rota</span>
+				</a>
+			</li>
+			<li {{#is pagename "===" "intel_marketing_dashboard"}}class="active" {{/is}}>
+				<a href="intel_marketing_dashboard.html" title="Fechamento da Rota" data-filter-tags="entrega fechamento da rota">
+					<span class="nav-link-text" data-i18n="nav.entrega_fechamento_da_rota">Fechamento da Rota</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+</ul>

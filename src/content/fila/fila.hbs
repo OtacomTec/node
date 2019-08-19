@@ -1,0 +1,288 @@
+{{#> 
+	layouts/ajax 
+	title="Fila Produção" 
+	pagename="blank" 
+	category_1="Apoio"
+	category_2="Produção"
+	heading="<i class='subheader-icon fal fa-'></i> Fila <span class='fw-300'>Produção</span>"  	
+}}
+
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="jkanban/jkanban.css">
+{{/inline}}
+
+{{#*inline "subheader-block"}}
+{{!-- Right content on content header --}}
+{{/inline}}
+
+{{#*inline "content-block"}}
+{{!-- Your main content goes here --}}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div id="panel-1" class="panel">
+            <div class="panel-hdr">
+                <h2>
+                    Organizador de <span class="fw-300"><i>Fila</i></span>
+                </h2>
+                <div class="panel-toolbar">
+                    <button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10"
+                        data-original-title="Collapse"></button>
+                    <button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip"
+                        data-offset="0,10" data-original-title="Fullscreen"></button>
+                    <button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10"
+                        data-original-title="Close"></button>
+                </div>
+            </div>
+            <div class="panel-container show">
+                <div class="panel-content">                    
+                        <div class="col-md-12">
+                            <div id="myKanban"></div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="panel-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="myKanban"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-xl-12">
+        <div id="panel-1" class="panel">
+            <div class="panel-hdr">
+                <h2>
+                    Estoque <span class="fw-300"><i>Produção</i></span>
+                </h2>
+                <div class="panel-toolbar">
+                    <button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10"
+                        data-original-title="Collapse"></button>
+                    <button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip"
+                        data-offset="0,10" data-original-title="Fullscreen"></button>
+                    <button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10"
+                        data-original-title="Close"></button>
+                </div>
+            </div>
+            <div class="panel-container show">
+                <div class="panel-content">                                                                
+                    <div class="container-fluid">
+                        <div class="panel-content">
+                            <div class="row">
+                                <div class="col-md-12">
+                                      <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+												<thead class="bg-sucess-200">
+													<tr>
+														<th>Cod. Produto</th>
+														<th>Produto</th>
+														<th>Última Compra</th>														
+														<th>Estoque Atual</th>														
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>268410680</td>
+														<td>Sal Branco</td>
+														<td>09/03/2019</td>														
+														<td>13 KG</td>														
+													</tr>
+													<tr>
+														<td>268410682</td>
+														<td>Farinha Branca com Fermento</td>
+														<td>03/08/2019</td>														
+														<td>45 KG</td>	
+													</tr>
+													<tr>
+														<td>268468936</td>
+														<td>Óleo de milho Soya 500ml</td>
+														<td>05/07/2019</td>														
+														<td>20 LT</td>	
+													</tr>
+													<tr>
+														<td>45670636</td>
+														<td>Tomate Vermelho</td>
+														<td>10/06/2019</td>														
+														<td>12 KG</td>	
+													</tr>
+													<tr>
+														<td>268210238</td>
+														<td>Óregano Italiano</td>
+														<td>15/05/2019</td>														
+														<td>300 KG</td>	
+													</tr>
+													<tr>
+														<td>268419052</td>
+														<td>Queijo Mussarela Torreões Peça</td>
+														<td>25/08/2019</td>														
+														<td>17 PC</td>	
+													</tr>
+													<tr>
+														<td>789456321</td>
+														<td>Presunto Sadia Peça</td>
+														<td>30/06/2019</td>														
+														<td>205 PC</td>	
+													</tr>
+													<tr>
+														<td>963258741</td>
+														<td>Leite INtegral Parmalat</td>
+														<td>20/04/2019</td>														
+														<td>30 LT</td>	
+													</tr>
+													<tr>
+														<td>1597534682</td>
+														<td>Farinha Branca com Fermente</td>
+														<td>10/03/2019</td>														
+														<td>717 KG</td>	
+													</tr>													
+												</tbody>												
+											</table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+<script src="jkanban/jkanban.js" type="text/javascript"></script>
+<script>
+    var KanbanTest = new jKanban({
+        element: '#myKanban',
+        gutter: '10px',
+        click: function (el) {
+            alert(el.innerHTML);
+            alert(el.dataset.eid)
+        },
+        boards: [
+            {
+                'id': '_NaoIniciadas',
+                'title': 'Não iniciadas',
+                'class': 'warning',
+                'item': [
+                    {
+                        'id': 'task-1',
+                        'title': 'Pedido: 1012',
+                    },
+                    {
+                        'id': 'task-2',
+                        'title': 'Pedido: 1022',
+                    }
+                ]
+            },
+            {
+                'id': '_EmProgresso',
+                'title': 'Em Produção',
+                'class': 'info',
+                'item': [
+                    {
+                        'title': 'Pedido: 1008',
+                    },
+                    {
+                        'title': 'Pedido: 1009',
+                    }
+                ]
+            },
+            {
+                'id': '_Finalizadas',
+                'dragTo': ['_EmProgresso'],
+                'title': 'Liberado Produção',
+                'class': 'success',
+                'item': [
+                    {
+                        'title': 'Pedido: 1007',
+                    },
+                    {
+                        'title': 'Pedido: 1006',
+                    },
+                     {
+                        'title': 'Pedido: 1005',
+                    },
+                     {
+                        'title': 'Pedido: 1004',
+                    },
+                    {
+                        'title': 'Pedido: 1003',
+                    },
+                    {
+                        'title': 'Pedido: 1002',
+                    },
+                     {
+                        'title': 'Pedido: 1001',
+                    },
+                     {
+                        'title': 'Pedido: 1000',
+                    },
+                    {
+                        'title': 'Pedido: 0999',
+                    },
+                    {
+                        'title': 'Pedido: 0998',
+                    },
+                     {
+                        'title': 'Pedido: 0997',
+                    },
+                     {
+                        'title': 'Pedido: 0996',
+                    }
+                ]
+            }
+        ]
+    });
+
+    var toDoButton = document.getElementById('addToDo');
+    toDoButton.addEventListener('click', function () {
+        KanbanTest.addElement(
+            '_todo',
+            {
+                'title': 'Test Add',
+            }
+        );
+    });
+
+    var addBoardDefault = document.getElementById('addDefault');
+    addBoardDefault.addEventListener('click', function () {
+        KanbanTest.addBoards(
+            [{
+                'id': '_default',
+                'title': 'Default (Can\'t drop in Done)',
+                'dragTo': ['_todo', '_working'],
+                'class': 'error',
+                'item': [
+                    {
+                        'title': 'Default Item',
+                    },
+                    {
+                        'title': 'Default Item 2',
+                    },
+                    {
+                        'title': 'Default Item 3',
+                    }
+                ]
+            }]
+        )
+    });
+
+    var removeBoard = document.getElementById('removeBoard');
+    removeBoard.addEventListener('click', function () {
+        KanbanTest.removeBoard('_done');
+    });
+</script>
+
+{{/inline}}
+
+{{/layouts/ajax}}

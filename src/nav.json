@@ -1,0 +1,175 @@
+{
+	"version": 4,
+	"lists": [
+		{
+			"title": "Indicadores e Paineis",
+			"icon": "fal fa-chart-area",
+			"items": [
+				{
+					"title": "Dashboard Vendas",
+					"showOnSeed": false,
+					"href": "intel_analytics_dashboard.html"
+				},
+				{
+					"title": "Dashboard Controladoria",
+					"showOnSeed": false,
+					"href": "intel_marketing_dashboard.html"
+				}				
+			]
+		},
+		{
+			"title": "Operações e Suprimentos"
+		},
+		{
+			"title": "Gestão de Vendas",
+			"icon": "fal fa-shopping-cart",
+			"items": [
+				{
+					"title": "Operações",
+					"showOnSeed": false,
+					"href": "ui_accordion.html"
+				},
+				{
+					"title": "Finalizadoras",
+					"showOnSeed": false,
+					"href": "intel_marketing_dashboard.html"
+				},
+				{
+					"title": "Pontos de Venda",
+					"href": "intel_introduction.html"
+				},
+				{
+					"title": "Operadores",
+					"href": "intel_privacy.html"
+				}				
+			]
+		},
+		{
+			"title": "Suprimentos",
+			"icon": "fal fa-dolly-flatbed-alt",
+			"items": [
+				{
+					"title": "Produto",
+					"showOnSeed": false,
+					"href": "produtos.html"
+				},
+				{
+					"title": "Nota Fiscal de Entrada",
+					"showOnSeed": false,
+					"href": "blank.html"
+				},
+				{
+					"title": "Inventário",
+					"href": "blank.html"
+				},
+				{
+					"title": "Kardex",
+					"href": "produtosKardex.html"
+				}				
+			]
+		},
+		{
+			"title": "Controladoria"
+		},
+		{
+			"title": "Caixa",
+			"icon": "ni ni-shuffle",
+			"items": [
+				{
+					"title": "Abertura",
+					"showOnSeed": false,
+					"href": "intel_analytics_dashboard.html"
+				},
+				{
+					"title": "Fechamento",
+					"showOnSeed": false,
+					"href": "intel_marketing_dashboard.html"
+				},
+				{
+					"title": "Conferência",
+					"href": "intel_introduction.html"
+				}								
+			]
+		},
+		{
+			"title": "Contas a Receber",
+			"icon": "fal fa-arrow-alt-down",
+			"items": [
+				{
+					"title": "Títulos",
+					"showOnSeed": false,
+					"href": "cr_titulos.html"
+				},
+				{
+					"title": "Baixa",
+					"showOnSeed": false,
+					"href": "intel_marketing_dashboard.html"
+				},
+				{
+					"title": "Estorno",
+					"href": "intel_introduction.html"
+				}								
+			]
+		},
+		{
+			"title": "Contas a Pagar",
+			"icon": "fal fa-arrow-alt-up",
+			"items": [
+				{
+					"title": "Títulos",
+					"showOnSeed": false,
+					"href": "intel_analytics_dashboard.html"
+				},
+				{
+					"title": "Baixa",
+					"showOnSeed": false,
+					"href": "intel_marketing_dashboard.html"
+				},
+				{
+					"title": "Estorno",
+					"href": "intel_introduction.html"
+				}								
+			]
+		},
+		{
+			"title": "Apoio"
+		},
+		{
+			"title": "Produção",
+			"icon": "ni ni-loop",
+			"items": [
+				{
+					"title": "Fila",
+					"showOnSeed": false,
+					"href": "fila.html"
+				},
+				{
+					"title": "Planejamento",
+					"showOnSeed": false,
+					"href": "intel_marketing_dashboard.html"
+				}
+			]
+		},
+		{
+			"title": "Entrega",
+			"icon": "fal fa-road",
+			"items": [
+				{
+					"title": "Entregadores",
+					"showOnSeed": false,
+					"href": "intel_analytics_dashboard.html"
+				},
+				{
+					"title": "Montagem da Rota",
+					"showOnSeed": false,
+					"href": "montagemRota.html"
+				},
+				{
+					"title": "Fechamento da Rota",
+					"showOnSeed": false,
+					"href": "intel_marketing_dashboard.html"
+				}
+			]
+		}		
+	]
+}

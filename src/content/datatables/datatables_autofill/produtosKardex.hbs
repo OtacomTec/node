@@ -1,0 +1,208 @@
+{{#> 
+	layouts/ajax 
+	title="Kardex" 
+	pagename="datatables_autofill" 
+	category_1="Suprimentos"
+	heading="<i class='subheader-icon fal fa-table'></i> Produtos: "
+}}
+
+{{#*inline "head-block"}}
+	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	<div class="col-xl-12">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Produtos
+				</h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<!-- datatable start -->
+					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+						<thead>
+							<tr>
+                                <th>C&oacutedigo</th>
+                                <th>Descri&ccedil&atildeo</th>
+                                <th>Descri&ccedil&atildeo Resumida</th>
+                                <th>Apresenta&ccedil&atildeo</th>
+                                <th>Pre&ccedilo</th>
+								<th>Estoque Atual</th>
+								<th></th>
+							</tr>
+						</thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Pizza de calabresa 45cm</td>
+                                <td>Pizza de calabresa</td>
+                                <td></td>
+                                <td>R$ 42,99</td>
+                                <td></td>
+                                <td><center><a class="btn btn-primary btn-xs">Kardex</a></center></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Pizza de mussarela 45cm</td>
+                                <td>Pizza de mussarela</td>
+                                <td></td>
+                                <td>R$ 38,99</td>
+                                <td></td>
+                                <td><center><a href="#kardex.html" class="btn btn-primary btn-xs">Kardex</a></center></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Pizza de pepperoni 45cm</td>
+                                <td>Pizza de pepperoni</td>
+                                <td></td>
+                                <td>R$ 42,99</td>
+                                <td></td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Refrigerante Coca-Cola 500ml</td>
+                                <td>Coca-Cola 500ml</td>
+                                <td>Garrafa de 500ml</td>
+                                <td>R$ 5,60</td>
+                                <td>1.459</td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Refrigerante Kuat 2l</td>
+                                <td>Kuat 2l</td>
+                                <td>Garrafa de 2l</td>
+                                <td>R$ 7,00</td>
+                                <td>659</td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Refrigerante Coca-Cola 350ml</td>
+                                <td>Coca-Cola 350ml</td>
+                                <td>Lata de 350ml</td>
+                                <td>R$ 3,50</td>
+                                <td>3.574</td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Bolo de chocolate recheado fatia 200g</td>
+                                <td>Bolo de chocolate recheado</td>
+                                <td></td>
+                                <td>R$ 5,00</td>
+                                <td></td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Bolo de cenoura fatia 200g</td>
+                                <td>Bolo de cenoura</td>
+                                <td></td>
+                                <td>R$ 3,00</td>
+                                <td></td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Salada caesar com frango grelhado</td>
+                                <td>Salada caesar</td>
+                                <td></td>
+                                <td>R$ 21,00</td>
+                                <td></td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Salada de arroz 7 gr&atildeos</td>
+                                <td>Salada de arroz 7 gr&atildeos</td>
+                                <td></td>
+                                <td>R$ 19,00</td>
+                                <td></td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Suco de laranja 450ml</td>
+                                <td>Suco de laranja</td>
+                                <td>Copo 450ml</td>
+                                <td>R$ 4,50</td>
+                                <td></td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Batida de frutas 450ml</td>
+                                <td>Suco de frutas</td>
+                                <td>Copo 450ml</td>
+                                <td>R$ 6,50</td>
+                                <td></td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Cerveja skol 350ml</td>
+                                <td>Skol 350ml</td>
+                                <td>Lata 350ml</td>
+                                <td>R$ 3,50</td>
+                                <td>1.356</td>
+                                <td><center><button class="btn btn-primary btn-xs">Kardex</button></center></td>
+                            </tr>
+                        </tbody>
+					</table>
+					<!-- datatable end -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+
+<!-- datatble responsive bundle contains: 
+	+ jquery.dataTables.js
+	+ dataTables.bootstrap4.js
+	+ dataTables.autofill.js							
+	+ dataTables.buttons.js
+	+ buttons.bootstrap4.js
+	+ buttons.html5.js
+	+ buttons.print.js
+	+ buttons.colVis.js
+	+ dataTables.colreorder.js							
+	+ dataTables.fixedcolumns.js							
+	+ dataTables.fixedheader.js						
+	+ dataTables.keytable.js						
+	+ dataTables.responsive.js							
+	+ dataTables.rowgroup.js							
+	+ dataTables.rowreorder.js							
+	+ dataTables.scroller.js							
+	+ dataTables.select.js							
+	+ datatables.styles.app.js
+	+ datatables.styles.buttons.app.js -->
+<script src="js/datagrid/datatables/datatables.bundle.js"></script>
+<script>
+	$(document).ready( function () {
+		$('#dt-basic-example').dataTable({
+			responsive: true,
+			autoFill: {
+				focus: 'hover'
+			}
+        });
+	});
+</script>
+
+{{/inline}}
+
+{{/layouts/ajax}}

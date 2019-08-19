@@ -1,0 +1,112 @@
+{{#> 
+	layouts/ajax 
+	title="Titulos" 
+	pagename="datatables_autofill" 
+	category_1="Contas a receber"
+	heading="<i class='subheader-icon fal fa-table'></i> T&iacutetulos: "
+}}
+
+{{#*inline "head-block"}}
+	<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	<div class="col-xl-12">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr">	
+                <h2>
+                    T&iacutetulos
+                </h2>
+				<div class="panel-toolbar">
+					<button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
+					<button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+					<button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+				</div>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">									
+					<!-- datatable start -->
+					<table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+						<thead>
+							<tr>
+                                <th>Empresa</th>
+                                <th>N&uacutemero</th>
+                                <th>S&eacuterie</th>
+                                <th>Letra</th>
+                                <th>Valor a Receber</th>
+                                <th>Dt. Emiss&atildeo</th>
+								<th>Dt. Vencimento</th>
+								<th></th>
+							</tr>
+						</thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><center><a class="btn btn-primary btn-xs">Detalhes</a></center></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><center><a href="#detalhesCRTitulo.html" class="btn btn-primary btn-xs">Detalhes</a></center></td>
+                            </tr>
+                        </tbody>
+					</table>
+					<!-- datatable end -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+
+<!-- datatble responsive bundle contains: 
+	+ jquery.dataTables.js
+	+ dataTables.bootstrap4.js
+	+ dataTables.autofill.js							
+	+ dataTables.buttons.js
+	+ buttons.bootstrap4.js
+	+ buttons.html5.js
+	+ buttons.print.js
+	+ buttons.colVis.js
+	+ dataTables.colreorder.js							
+	+ dataTables.fixedcolumns.js							
+	+ dataTables.fixedheader.js						
+	+ dataTables.keytable.js						
+	+ dataTables.responsive.js							
+	+ dataTables.rowgroup.js							
+	+ dataTables.rowreorder.js							
+	+ dataTables.scroller.js							
+	+ dataTables.select.js							
+	+ datatables.styles.app.js
+	+ datatables.styles.buttons.app.js -->
+<script src="js/datagrid/datatables/datatables.bundle.js"></script>
+<script>
+	$(document).ready( function () {
+		$('#dt-basic-example').dataTable({
+			responsive: true,
+			autoFill: {
+				focus: 'hover'
+			}
+        });
+	});
+</script>
+
+{{/inline}}
+
+{{/layouts/ajax}}

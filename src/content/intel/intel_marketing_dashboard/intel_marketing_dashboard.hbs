@@ -1,0 +1,776 @@
+{{#> 
+	layouts/ajax 
+	title="Controladoria Dashboard" 
+	pagename="intel_marketing_dashboard" 
+	category_1="Indicadores"
+	heading="<i class='subheader-icon fal fa-chart-area'></i> Controladoria <span class='fw-300'>Dashboard</span>" 
+}}
+
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+{{/inline}}
+
+{{#*inline "subheader-block"}}
+<div class="subheader-block d-lg-flex align-items-center">
+	<div class="d-inline-flex flex-column justify-content-center mr-3">
+		<span class="fw-300 fs-xs d-block opacity-50">
+			<small>RECEBER HOJE</small> 
+		</span>
+		<span class="fw-500 fs-xl d-block" style = "color:#009000;">
+			R$ 17.000,00
+		</span>
+	</div>
+	<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#886ab5" sparkHeight="32px" sparkBarWidth="5px" values="3,4,3,6,7,3,3,6,2,6,4"></span>
+</div>
+<div class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
+	<div class="d-inline-flex flex-column justify-content-center mr-3">
+		<span class="fw-300 fs-xs d-block opacity-50">
+			<small>PAGAR HOJE</small> 
+		</span>
+		<span class="fw-500 fs-xl d-block" style = "color:#FF0000;">
+			R$ 8.590,20
+		</span>
+	</div>
+	<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" sparkBarWidth="5px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
+</div>
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	<div class="col-sm-6 col-xl-3">
+		<div class="p-3 bg-danger-500 rounded overflow-hidden position-relative text-white mb-g" style = "background-color:#c75446;">
+			<div class="">
+				<h3 class="display-4 d-block l-h-n m-0 fw-500" >
+					R$ 257.193,20
+					<small class="m-0 l-h-n">DESPESAS TOTAIS</small>
+				</h3>
+			</div>
+			<i class="fal fa-arrow-up position-absolute pos-right pos-bottom opacity-15 mb-n1 mr-n1" style="font-size:6rem"></i>
+		</div>
+	</div>
+	<div class="col-sm-6 col-xl-3">
+		<div class="p-3 bg-success-500 rounded overflow-hidden position-relative text-white mb-g" style = "background-color:#009000;">
+			<div class="">
+				<h3 class="display-4 d-block l-h-n m-0 fw-500">
+				    R$ 400.093,50
+					<small class="m-0 l-h-n">RECEITAS TOTAIS</small>
+				</h3>
+			</div>
+			<i class="fal fa-gem position-absolute pos-right pos-bottom opacity-15  mb-n1 mr-n4" style="font-size: 6rem;"></i>
+		</div>
+	</div>
+	<div class="col-sm-6 col-xl-3">
+		<div class="p-3 bg-info-500 rounded overflow-hidden position-relative text-white mb-g" style = "background-color:#304dc7;">
+			<div class="">
+				<h3 class="display-4 d-block l-h-n m-0 fw-500">
+					 + R$ 142.900,30
+					<small class="m-0 l-h-n">RESULTADO</small>
+				</h3>
+			</div>
+			<i class="fal fa-lightbulb position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6" style="font-size: 8rem;"></i>
+		</div>
+	</div>
+	<div class="col-sm-6 col-xl-3">
+		<div class="p-3 bg-info-200 rounded overflow-hidden position-relative text-white mb-g" style = "background-color:#708090;" >
+			<div class="">
+				<h3 class="display-4 d-block l-h-n m-0 fw-500">
+				     + 40%
+					<small class="m-0 l-h-n">RENTABILIDADE</small>
+				</h3>
+			</div>
+			<i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n1 mr-n4" style="font-size: 6rem;"></i>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-12">
+		<div id="panel-1" class="panel">
+			<div class="panel-hdr"> 
+				<h2>
+					Análise Financeira
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content bg-subtlelight-fade">
+					<div id="js-checkbox-toggles" class="d-flex mb-3">
+						<div class="custom-control custom-switch mr-2">
+							<input type="checkbox" class="custom-control-input" name="gra-0" id="gra-0" checked="checked">
+							<label class="custom-control-label" for="gra-0">Receitas </label>
+						</div>
+						<div class="custom-control custom-switch mr-2">
+							<input type="checkbox" class="custom-control-input" name="gra-1" id="gra-1" checked="checked">
+							<label class="custom-control-label" for="gra-1">Despesas</label>
+						</div>
+						<div class="custom-control custom-switch mr-2">
+							<input type="checkbox" class="custom-control-input" name="gra-2" id="gra-2" checked="checked">
+							<label class="custom-control-label" for="gra-2">Rentabilidade</label>
+						</div>
+					</div>
+					<div id="flot-toggles" class="w-100 mt-4" style="height: 300px"></div>
+				</div> 
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6">
+		<div id="panel-2" class="panel panel-locked" data-panel-sortable data-panel-collapsed data-panel-close>
+			<div class="panel-hdr">	
+				<h2>
+					Taxa de <span class="fw-300"><i>MarkUP</i></span> 
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content poisition-relative">		
+					<div class="p-1 position-absolute pos-right pos-top mt-3 mr-3 z-index-cloud d-flex align-items-center justify-content-center">
+						<div class="border-faded border-top-0 border-left-0 border-bottom-0 py-2 pr-4 mr-3 hidden-sm-down">
+							
+						</div>
+						<div class="js-easy-pie-chart color-info-400 position-relative d-inline-flex align-items-center justify-content-center" data-percent="35" data-piesize="95" data-linewidth="10" data-scalelength="5">
+							<div class="js-easy-pie-chart color-success-400 position-relative position-absolute pos-left pos-right pos-top pos-bottom d-flex align-items-center justify-content-center" data-percent="65" data-piesize="60" data-linewidth="5" data-scalelength="1" data-scalecolor="#fff">
+								<div class="position-absolute pos-top pos-left pos-right pos-bottom d-flex align-items-center justify-content-center fw-500 fs-xl text-dark">18%</div>
+							</div>	
+						</div>
+					</div>			
+					<div id="flot-area" style="width:100%; height:300px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-6">
+		<div id="panel-3" class="panel panel-locked" data-panel-sortable data-panel-collapsed data-panel-close>
+			<div class="panel-hdr">	
+				<h2>
+					Efeito <span class="fw-300"><i>Imposto</i></span> 
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content poisition-relative">	
+
+					<div class="pb-5 pt-3">
+
+						<div class="row">
+
+							<div class="col-6 col-xl-3 d-sm-flex align-items-center">
+								<div class="p-2 mr-3 bg-info-200 rounded">
+									<span class="peity-bar" data-peity="{&quot;fill&quot;: [&quot;#fff&quot;], &quot;width&quot;: 27, &quot;height&quot;: 27 }">09 % </span>
+								</div>
+								<div>
+									<label class="fs-sm mb-0">Municipal</label>
+									<h4 class="font-weight-bold mb-0">R$ 36.084,15</h4>
+								</div>
+							</div>
+							<div class="col-6 col-xl-3 d-sm-flex align-items-center">
+								<div class="p-2 mr-3 bg-info-200 rounded">
+									<span class="peity-bar" data-peity="{&quot;fill&quot;: [&quot;#fff&quot;], &quot;width&quot;: 27, &quot;height&quot;: 27 }">11 % </span>
+								</div>
+								<div>
+									<label class="fs-sm mb-0">Estadual</label>
+									<h4 class="font-weight-bold mb-0">R$ 44.102,85</h4>
+								</div>
+							</div>
+							<div class="col-6 col-xl-3 d-sm-flex align-items-center">
+								<div class="p-2 mr-3 bg-info-200 rounded">
+									<span class="peity-bar" data-peity="{&quot;fill&quot;: [&quot;#fff&quot;], &quot;width&quot;: 27, &quot;height&quot;: 27 }">12 % </span>
+								</div>
+								<div>
+									<label class="fs-sm mb-0">Federal</label>
+									<h4 class="font-weight-bold mb-0">R$ 48.112,20</h4>
+								</div>
+							</div>
+							<div class="col-6 col-xl-3 d-sm-flex align-items-center">
+								<div class="p-2 mr-3 bg-info-200 rounded">
+									<span class="peity-bar" data-peity="{&quot;fill&quot;: [&quot;#fff&quot;], &quot;width&quot;: 27, &quot;height&quot;: 27 }">21 % </span>
+								</div>
+								<div>
+									<label class="fs-sm mb-0">Trabalhista</label>
+									<h4 class="font-weight-bold mb-0">R$ 84.019,35</h4>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div id="flotVisit" style="width:100%; height:208px;"></div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-12">
+			<div id="panel-4" class="panel">
+			<div class="panel-hdr">	
+				<h2>
+					Títulos <span class="fw-300"><i>A Pagar</i></span> 
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content">	
+					 <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+						<thead class="bg-warning-200">
+							<tr>
+								<th>Nº Titulo</th>
+								<th>Fornecedor</th>
+								<th>Dt.Vencimento</th>
+								<th>Email</th>
+								<th>CustomerCVV</th>
+								<th>Pais</th>
+								<th>Valor</th>
+								<th>Controls</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>268410636</td>
+								<td>Papelaria</td>
+								<td>03/03/2019</td>
+								<td>odio.auctor@orcilobortis.edu</td>
+								<td>717</td>
+								<td>Timor-Leste</td>
+								<td>$7,007</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>077610947</td>
+								<td>Gráfica Boa Sorte</td>
+								<td>13/08/2019</td>
+								<td>mi.Aliquam@afeugiat.edu</td>
+								<td>715</td>
+								<td>Burkina Faso</td>
+								<td>$7,052</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>959104621</td>
+								<td>Coca Cola Brasil</td>
+								<td>14/05/2019</td>
+								<td>amet.lorem@risus.edu</td>
+								<td>256</td>
+								<td>Sri Lanka</td>
+								<td>$6,697</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>756590147</td>
+								<td>Descartavéis Porciúncula</td>
+								<td>11/06/2019</td>
+								<td>sagittis.placerat.Cras@nonlaciniaat.com</td>
+								<td>963</td>
+								<td>Liberia</td>
+								<td>$8,117</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>533801387</td>
+								<td>Gilmore Modas e Uniformes</td>
+								<td>23/09/2019</td>
+								<td>consectetuer.adipiscing@semegestasblandit.co.uk</td>
+								<td>754</td>
+								<td>Svalbard and Jan Mayen Islands</td>
+								<td>$5,328</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>403080948</td>
+								<td>Foley Despachante's</td>
+								<td>31/07/2020</td>
+								<td>a.auctor.non@nuncrisus.net</td>
+								<td>826</td>
+								<td>Afghanistan</td>
+								<td>$6,823</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>114290869</td>
+								<td>HortiFruti Fruta Boa Ltda</td>
+								<td>23/04/2020</td>
+								<td>porttitor.interdum@dolordolortempus.com</td>
+								<td>256</td>
+								<td>Singapore</td>
+								<td>$6,679</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>033182882</td>
+								<td>Reilly Livraria</td>
+								<td>23/04/2019</td>
+								<td>vestibulum.lorem@adipiscing.ca</td>
+								<td>703</td>
+								<td>Chile</td>
+								<td>$5,252</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>471026559</td>
+								<td>Jena's W Temperos</td>
+								<td>12/06/2019</td>
+								<td>mollis@lacusUtnec.org</td>
+								<td>998</td>
+								<td>Botswana</td>
+								<td>$5,542</td>
+								<td>1</td>
+							</tr>
+							
+							<tr>
+								<td>359926938</td>
+								<td>Frio's Comércio de carnes</td>
+								<td>10/09/2019</td>
+								<td>Nullam@utaliquamiaculis.org</td>
+								<td>806</td>
+								<td>South Georgia and The South Sandwich Islands</td>
+								<td>$5,003</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>369436084</td>
+								<td>Skin Essencias e Sabores S.A</td>
+								<td>23/04/2021</td>
+								<td>nisl@metus.com</td>
+								<td>394</td>
+								<td>Zambia</td>
+								<td>$6,766</td>
+								<td>1</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th>Nº Titulo</th>
+								<th>Fornecedor</th>
+								<th>Dt.Vencimento</th>
+								<th>Email</th>
+								<th>CustomerCVV</th>
+								<th>Pais</th>
+								<th>Valor</th>
+								<th>Controls</th>
+							</tr>
+						</tfoot>
+					</table>
+					<!-- datatable end -->
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+
+	<script type="text/javascript">
+		/* Activate smart panels */
+		$('#js-page-content').smartPanel();
+	</script>
+
+	<!-- The order of scripts is irrelevant. Please check out the plugin pages for more details about these plugins below: -->
+	<script src="js/statistics/peity/peity.bundle.js"></script>
+	<script src="js/statistics/flot/flot.bundle.js"></script>
+	<script src="js/statistics/easypiechart/easypiechart.bundle.js"></script>
+	<script src="js/datagrid/datatables/datatables.bundle.js"></script>
+
+	<script>
+
+		/* defined datas */
+		var dataTargetProfit = [
+			[1354586000000, 153],
+			[1364587000000, 658],
+			[1374588000000, 198],
+			[1384589000000, 663],
+			[1394590000000, 801],
+			[1404591000000, 1080],
+			[1414592000000, 353],
+			[1424593000000, 749],
+			[1434594000000, 523],
+			[1444595000000, 258],
+			[1454596000000, 688],
+			[1464597000000, 364]
+		]
+		var dataProfit = [
+			[1354586000000, 53],
+			[1364587000000, 65],
+			[1374588000000, 98],
+			[1384589000000, 83],
+			[1394590000000, 980],
+			[1404591000000, 808],
+			[1414592000000, 720],
+			[1424593000000, 674],
+			[1434594000000, 23],
+			[1444595000000, 79],
+			[1454596000000, 88],
+			[1464597000000, 36]
+		]
+		var dataSignups = [
+			[1354586000000, 647],
+			[1364587000000, 435],
+			[1374588000000, 784],
+			[1384589000000, 346],
+			[1394590000000, 487],
+			[1404591000000, 463],
+			[1414592000000, 479],
+			[1424593000000, 236],
+			[1434594000000, 843],
+			[1444595000000, 657],
+			[1454596000000, 241],
+			[1464597000000, 341]
+		]
+		var dataSet1 = [
+			[0, 10],
+			[100, 8],
+			[200, 7],
+			[300, 5],
+			[400, 4],
+			[500, 6],
+			[600, 3],
+			[700, 2]
+		];
+		var dataSet2 = [
+			[0, 9],
+			[100, 6],
+			[200, 5],
+			[300, 3],
+			[400, 3],
+			[500, 5],
+			[600, 2],
+			[700, 1]
+		];
+
+		$(document).ready(function () {
+
+			/* init datatables */
+			$('#dt-basic-example').dataTable(
+			{
+				responsive: true,
+				dom:
+					"<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'B>>" +
+					"<'row'<'col-sm-12'tr>>" +
+					"<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+				buttons: [
+					{
+						extend: 'colvis',
+						text: 'Column Visibility',
+						titleAttr: 'Col visibility',
+						className: 'btn-outline-default'
+					},
+					{
+						extend: 'csvHtml5',
+						text: 'CSV',
+						titleAttr: 'Generate CSV',
+						className: 'btn-outline-default'
+					},
+					{
+						extend: 'copyHtml5',
+						text: 'Copy',
+						titleAttr: 'Copy to clipboard',
+						className: 'btn-outline-default'
+					},
+					{
+						extend: 'print',
+						text: '<i class="fal fa-print"></i>',
+						titleAttr: 'Print Table',
+						className: 'btn-outline-default'
+					}
+
+				],
+				columnDefs: [
+					{
+						targets: -1,
+						title: '',
+						orderable: false,
+						render: function(data, type, full, meta)
+						{
+
+							/*
+							-- ES6
+							-- convert using https://babeljs.io online transpiler
+							return `
+							<a href='javascript:void(0);' class='btn btn-sm btn-icon btn-outline-danger rounded-circle mr-1' title='Delete Record'>
+								<i class="fal fa-times"></i>
+							</a>
+							<div class='dropdown d-inline-block dropleft '>
+								<a href='#'' class='btn btn-sm btn-icon btn-outline-primary rounded-circle shadow-0' data-toggle='dropdown' aria-expanded='true' title='More options'>
+									<i class="fal fa-ellipsis-v"></i>
+								</a>
+								<div class='dropdown-menu'>
+									<a class='dropdown-item' href='javascript:void(0);'>Change Status</a>
+									<a class='dropdown-item' href='javascript:void(0);'>Generate Report</a>
+								</div>
+							</div>`;
+								
+							ES5 example below:	
+
+							*/
+							return "\n\t\t\t\t\t\t<a href='javascript:void(0);' class='btn btn-sm btn-icon btn-outline-danger rounded-circle mr-1' title='Delete Record'>\n\t\t\t\t\t\t\t<i class=\"fal fa-times\"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<div class='dropdown d-inline-block dropleft'>\n\t\t\t\t\t\t\t<a href='#'' class='btn btn-sm btn-icon btn-outline-primary rounded-circle shadow-0' data-toggle='dropdown' aria-expanded='true' title='More options'>\n\t\t\t\t\t\t\t\t<i class=\"fal fa-ellipsis-v\"></i>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<div class='dropdown-menu'>\n\t\t\t\t\t\t\t\t<a class='dropdown-item' href='javascript:void(0);'>Change Status</a>\n\t\t\t\t\t\t\t\t<a class='dropdown-item' href='javascript:void(0);'>Generate Report</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>";
+						},
+					},
+					
+				]
+
+			});
+
+
+			/* flot toggle example */
+			var flot_toggle = function () {
+
+				var data = [{
+					label: "Receitas",
+					data: dataTargetProfit,
+					color: myapp_get_color.success_500,
+					bars: {
+						show: true,
+						align: "center",
+						barWidth: 30 * 30 * 60 * 1000 * 80,
+						lineWidth: 0,
+						/*fillColor: {
+							colors: [myapp_get_color.primary_500, myapp_get_color.primary_900]
+						},*/
+						fillColor: {
+							colors: [{
+								opacity: 0.9
+							}, {
+								opacity: 0.1
+							}]
+						}
+					},
+					highlightColor: 'rgba(255,255,255,0.3)',
+					shadowSize: 0
+				}, {
+					label: "Despesas",
+					data: dataProfit,
+					color: myapp_get_color.danger_500,
+					lines: {
+						show: true,
+						lineWidth: 2
+					},
+					shadowSize: 0,
+					points: {
+						show: true
+					}
+				}, {
+					label: "Rentabilidade",
+					data: dataSignups,
+					color: myapp_get_color.info_500,
+					lines: {
+						show: true,
+						lineWidth: 2
+					},
+					shadowSize: 0,
+					points: {
+						show: true
+					}
+				}]
+
+				var options = {
+					grid: {
+						hoverable: true,
+						clickable: true,
+						tickColor: '#f2f2f2',
+						borderWidth: 1,
+						borderColor: '#f2f2f2'
+					},
+					tooltip: true,
+					tooltipOpts: {
+						cssClass: 'tooltip-inner',
+						defaultTheme: false
+					},
+					xaxis: {
+						mode: "time"
+					},
+					yaxes: {
+						tickFormatter: function (val, axis) {
+							return "$" + val;
+						},
+						max: 1200
+					}
+
+				};
+
+				var plot2 = null;
+
+				function plotNow() {
+					var d = [];
+					$("#js-checkbox-toggles").find(':checkbox').each(function () {
+						if ($(this).is(':checked')) {
+							d.push(data[$(this).attr("name").substr(4, 1)]);
+						}
+					});
+					if (d.length > 0) {
+						if (plot2) {
+							plot2.setData(d);
+							plot2.draw();
+						} else {
+							plot2 = $.plot($("#flot-toggles"), d, options);
+						}
+					}
+
+				};
+
+				$("#js-checkbox-toggles").find(':checkbox').on('change', function () {
+					plotNow();
+				});
+				plotNow()
+			}
+			flot_toggle();
+			/* flot toggle example -- end*/
+
+			/* flot area */
+			var flotArea = $.plot($('#flot-area'), [{
+					data: dataSet1,
+					label: 'Preço de Venda',
+					color: myapp_get_color.success_200
+				},
+				{
+					data: dataSet2,
+					label: 'Custo Produto',
+					color: myapp_get_color.info_200
+				}
+			], {
+				series: {
+					lines: {
+						show: true,
+						lineWidth: 2,
+						fill: true,
+						fillColor: {
+							colors: [{
+								opacity: 0
+							}, {
+								opacity: 0.5
+							}]
+						}
+					},
+					shadowSize: 0
+				},
+				points: {
+					show: true,
+				},
+				legend: {
+					noColumns: 1,
+					position: 'nw'
+				},
+				grid: {
+					hoverable: true,
+					clickable: true,
+					borderColor: '#ddd',
+					tickColor: '#ddd',
+					aboveData: true,
+					borderWidth: 0,
+					labelMargin: 5,
+					backgroundColor: 'transparent'
+				},
+				yaxis: {
+					tickLength: 1,
+					min: 0,
+					max: 15,
+					color: '#eee',
+					font: {
+						size: 0,
+						color: '#999'
+					}
+				},
+				xaxis: {
+					tickLength: 1,
+					color: '#eee',
+					font: {
+						size: 10,
+						color: '#999'
+					}
+				}
+
+			});
+			/* flot area -- end */
+	   
+			var flotVisit =  $.plot('#flotVisit', [{
+					data: [
+					[3, 0],
+					[4, 1],
+					[5, 3],
+					[6, 3],
+					[7, 10],
+					[8, 11],
+					[9, 12],
+					[10, 9],
+					[11, 12],
+					[12, 8],
+					[13, 5]
+				],
+				color: myapp_get_color.success_200
+			}, {
+				data: [
+					[1, 0],
+					[2, 0],
+					[3, 1],
+					[4, 2],
+					[5, 2],
+					[6, 5],
+					[7, 8],
+					[8, 12],
+					[9, 9],
+					[10, 11],
+					[11, 5]
+				],
+				color: myapp_get_color.info_200
+			}], {
+				series: {
+					shadowSize: 0,
+					lines: {
+						show: true,
+						lineWidth: 2,
+						fill: true,
+						fillColor: {
+							colors: [{
+								opacity: 0
+							}, {
+								opacity: 0.12
+							}]
+						}
+					}
+				},
+				grid: {
+					borderWidth: 0
+				},
+				yaxis: {
+					min: 0,
+					max: 15,
+					tickColor: '#ddd',
+					ticks: [
+						[0, ''],
+						[5, '100K'],
+						[10, '200K'],
+						[15, '300K']
+					],
+					font: {
+						color: '#444',
+						size: 10
+					}
+				},
+				xaxis: {
+
+					tickColor: '#eee',
+					ticks: [
+						[2, '2am'],
+						[3, '3am'],
+						[4, '4am'],
+						[5, '5am'],
+						[6, '6am'],
+						[7, '7am'],
+						[8, '8am'],
+						[9, '9am'],
+						[10, '1pm'],
+						[11, '2pm'],
+						[12, '3pm'],
+						[13, '4pm']
+					],
+					font: {
+						color: '#999',
+						size: 9
+					}
+				}
+			});
+
+
+		});
+	</script>
+{{/inline}}
+
+{{/layouts/ajax}}
